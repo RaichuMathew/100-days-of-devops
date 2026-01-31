@@ -1,13 +1,13 @@
 # Day 02 – SSH Security Hardening
 
 ## Task
-Disable direct SSH login for the root user as per new security protocols.
+Disable direct SSH login for the root user.
 
 ## Server
 All App Servers (Stratos Datacenter)
 
 ## Purpose
-Disabling direct root SSH login is a security best practice. It reduces the risk of brute-force attacks and unauthorized access. Administrators should log in using a normal user account and escalate privileges using sudo, ensuring better auditability and access control.
+Disabling direct root SSH login is a security best practice. It reduces the risk of attacks and unauthorized access. Administrators should log in using a normal user account and escalate privileges using sudo, ensuring better auditability and access control.
 
 ## Verification
 After updating the configuration:
