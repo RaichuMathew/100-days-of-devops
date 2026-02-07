@@ -1,14 +1,14 @@
+#Day10
 ## Task:
-Resolve MariaDB service failure on the database server (stdb01).
+Create a bash script on App Server 3 to take a backup of the beta website
+and store it locally as well as on the Nautilus Backup Server.
 
 ## Purpose:
-The MariaDB service was failing to start because required directories
-used by the database were missing or misconfigured. MariaDB depends on
-/var/lib/mysql for storing database files and /var/run/mysqld for
-creating runtime socket and PID files. Since these directories were
-absent or inaccessible, the MariaDB daemon exited immediately with
-status=1. Creating the directories and assigning correct ownership
-(mysql:mysql) restored proper access, allowing the MariaDB service to
-start successfully and re-enable application connectivity to the
-database.
+The production team requires an automated and reusable backup solution
+for the static beta website. The script creates a zip archive of the
+/var/www/html/beta directory, stores it temporarily on the local server,
+and securely copies it to the central Nautilus Backup Server. Passwordless
+SSH authentication ensures the script runs non-interactively, and the
+solution follows security best practices by avoiding sudo usage inside
+the script.
 
