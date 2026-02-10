@@ -11,7 +11,7 @@ Update Connector port from 8080 to 5004
 sudo systemctl start tomcat
 sudo systemctl enable tomcat
 
-## Copy ROOT.war from Jump Host to App Server
+## Copy ROOT.war from Jump Host to App Server(Run in jumphost)
 scp /tmp/ROOT.war banner@stapp03:/home/banner
 
 ## Deploy ROOT.war in Tomcat
