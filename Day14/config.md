@@ -36,4 +36,4 @@ systemctl restart httpd
 
 ## Verification
 
-curl stapp01:5003
+curl stapp01:3005
