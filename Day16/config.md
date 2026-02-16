@@ -20,8 +20,8 @@ Value:3000
 vi /etc/nginx/nginx.conf
 
 ## Add the following in conf file
- upstream app_servers {
 
+ upstream app_servers {
      server stapp01:3000;
      server stapp02:3000;
      server stapp03:3000;
@@ -35,3 +35,6 @@ nginx -t
 
 ## Restart nginx
 systemctl restart nginx
+
+# Verification
+curl localhost:3000
