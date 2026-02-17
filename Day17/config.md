@@ -2,7 +2,7 @@
 ## Connect to DB server
 ssh peter@stlb01
 
-##Taking sudo permission for creating DB user and password
+## Taking sudo permission for creating DB user and password
 sudo -u postgres sql
 
 CREATE USER kodekloud_rin WITH PASSWORD 'GYkqjdhdc';
