@@ -3,6 +3,7 @@
 ## Connect to storage server
 ssh natasha@ststor01
 
-sudo su
+
 ## Cloning git repo
-git clone /opt/official.git /usr/src/kodekloudrepos
+cd /usr/src/kodekloudrepos
+git clone /opt/official.git 
