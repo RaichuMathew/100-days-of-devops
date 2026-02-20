@@ -1,7 +1,3 @@
-s is a classic Git Flow workflow. By moving away from direct pushes to the master branch and using Pull Requests (PRs) instead, you ensure that code is peer-reviewed and stable before it ever hits production.
-
-Here are your condensed "Short Notes" for Max to follow to complete this task successfully.
-
 ## 1. Preparation & Local Check (SSH)
 Before touching the UI, Max needs to verify the work locally on the Storage Server.
 
