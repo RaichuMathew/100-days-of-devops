@@ -7,7 +7,7 @@ User: max | Pass: Max_pass123
 
 Action: * cd ~/repo-name (Navigate to the cloned repo).
 
-git log --all --graph (Confirm the story/fox-and-grapes branch exists and see Sarah’s previous history).
+git log --oneline(Confirm the story/fox-and-grapes branch exists and see Sarah’s previous history).
 
 ## 2. Create the Pull Request (Max)
 Login to the Gitea UI to start the formal merge process.
