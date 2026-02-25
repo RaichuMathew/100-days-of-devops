@@ -1,0 +1,45 @@
+# Commands Executed
+## Create or Edit the Manifest
+vi pod.yaml
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: volume-share-datacenter
+spec:
+  containers:
+  - image: fedora:latest
+    name: volume-container-datacenter-1
+    command: ["sleep","360000"]
+    volumeMounts:
+    - mountPath: /tmp/blog
+      name: volume-share
+
+  - image: fedora:latest
+    name: volume-container-datacenter-2
+    command: ["sleep","360000"]
+    volumeMounts:
+    - mountPath: /tmp/cluster
+      name: volume-share
+
+  volumes:
+  - name: volume-share
+    emptyDir: {}
+
+## Deploy the Pod
+k apply -f pod.yaml
+
+## Access the First Container
+kubectl exec -it volume-share-datacenter -c volume-container-datacenter-1 -- /bin/bash
+
+## Create the Test File (Inside Container 1)
+touch blog.txt
+
+## Access the Second Container
+kubectl exec -it volume-share-datacenter -c volume-container-datacenter-2 -- /bin/bash
+
+## Confirm Shared Storage (Inside Container 2)
+ls
+## Create the Test File (Inside Container 2)
+touch cluster.txt
