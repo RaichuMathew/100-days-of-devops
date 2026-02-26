@@ -1,4 +1,11 @@
-  labels:
+## Create manifest for service
+
+vi deploy.yaml
+
+''' apiVersion: apps/v1
+kind: Deployment
+metadata:
+labels:
     app: nginx-deployment
   name: nginx-deployment
 spec:
